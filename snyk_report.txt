@@ -1,0 +1,159 @@
+﻿
+Testing D:\Gabi\benchmark-compare-repo\NodeGoat ...
+
+Open Issues
+
+ ✗ [LOW] Sensitive Cookie in HTTPS Session Without 'Secure' Attribute
+   Finding ID: cca9c500-15d2-4767-8068-dbdfe136abdb
+   Path: app/views/login.html, line 159
+   Info: Cookie misses the Secure attribute (it is false by default). Set it to true to protect the cookie from man-in-the-middle attacks.
+
+ ✗ [LOW] Use of Hardcoded Passwords
+   Finding ID: f3925374-aaa9-419b-ad40-4a4c4b38f1d8
+   Path: test/security/profile-test.js, line 37
+   Info: Do not hardcode passwords in code. Found hardcoded password used in sutUserPassword.
+
+ ✗ [LOW] Hardcoded Non-Cryptographic Secret
+   Finding ID: e514e29a-d871-4188-9b5a-711ec5056cd9
+   Path: config/env/test.js, line 6
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [LOW] Sensitive Cookie in HTTPS Session Without 'Secure' Attribute
+   Finding ID: ff8d7c29-1e38-424c-891e-39d0be087db6
+   Path: app/views/login.html, line 163
+   Info: Cookie misses the Secure attribute (it is false by default). Set it to true to protect the cookie from man-in-the-middle attacks.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 1a0f52ff-1f5e-400d-bd47-9215c8b77822
+   Path: artifacts/db-reset.js, line 18
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 4a6bd564-1663-4589-9dd8-66764f85cb8f
+   Path: artifacts/db-reset.js, line 27
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Cross-site Scripting (XSS) - Potentially Insecure Settings
+   Finding ID: 2d9bf84c-6f35-4539-acf8-a12bd3548ddc
+   Path: server.js, line 137
+   Info: The autoescape setting is set to false. Disabling it might allow for Cross-site Scripting (XSS) attacks if user input is involved.
+
+ ✗ [MEDIUM] Information Exposure - X-Powered-By Header
+   Finding ID: da302ee9-f9af-4124-97b2-6067de257a4f
+   Path: server.js, line 15
+   Info: Disable X-Powered-By header for your Express app (consider using Helmet middleware), because it exposes information about the used framework to potential attackers.
+
+ ✗ [MEDIUM] Open Redirect
+   Finding ID: 8d86cc93-bc74-484d-b9ce-ff707f3913e5
+   Path: app/routes/index.js, line 72
+   Info: Unsanitized input from an HTTP parameter flows into redirect, where it is used as input for request redirection. This may result in an Open Redirect vulnerability.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 90ff895e-b732-46dc-8dc9-7a00f9b4593c
+   Path: app/routes/tutorial.js, line 31
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Cross-Site Request Forgery (CSRF)
+   Finding ID: fa5adaaa-8996-41d8-a576-ad6a4b4d97ae
+   Path: server.js, line 15
+   Info: CSRF protection is disabled for your Express app. This allows the attackers to execute requests on a user's behalf.
+
+ ✗ [MEDIUM] Cleartext Transmission - HTTP Instead of HTTPS
+   Finding ID: 65917893-1765-4aba-8271-3548fac701dc
+   Path: server.js, line 145
+   Info: http.createServer uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 77eaea0f-d6f1-4944-aa3a-88643b816a1b
+   Path: app/routes/tutorial.js, line 8
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: c4c787cd-8bc4-4564-86fb-88f112fc7b1f
+   Path: app/routes/session.js, line 125
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Use of Hardcoded Passwords
+   Finding ID: 67037610-39e4-49d6-adaf-4dfa64e28a37
+   Path: artifacts/db-reset.js, line 35
+   Info: Do not hardcode passwords in code. Found hardcoded password used in password.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 51492495-99e9-4b50-9afe-c3665efff3b4
+   Path: app/routes/session.js, line 189
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: bd21802c-764e-48cb-814c-d424cd9e6e9d
+   Path: app/routes/contributions.js, line 28
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 0f3d1e75-4453-491f-8f95-9638e6d662e3
+   Path: app/routes/error.js, line 3
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 47d00636-6dbc-41bd-91aa-6bea2cd73227
+   Path: app/routes/profile.js, line 40
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 7ba576b9-a7ba-4684-8665-3a5aa2552b4a
+   Path: app/routes/research.js, line 12
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [MEDIUM] Allocation of Resources Without Limits or Throttling
+   Finding ID: 1f5617ee-a062-4638-8693-08f7432479d0
+   Path: app/routes/session.js, line 44
+   Info: Expensive operation (a file system operation) is performed by an endpoint handler which does not use a rate-limiting mechanism. It may enable the attackers to perform Denial-of-service attacks. Consider using a rate-limiting middleware such as express-limit.
+
+ ✗ [HIGH] Code Injection
+   Finding ID: 1f0f7de4-d8ff-4560-9099-9648bca8b197
+   Path: app/routes/contributions.js, line 34
+   Info: Unsanitized input from the HTTP request body flows into eval, where it is executed as JavaScript code. This may result in a Code Injection vulnerability.
+
+ ✗ [HIGH] Code Injection
+   Finding ID: 7e46b9ad-1155-40e5-9cf0-9d90fd757b9a
+   Path: app/routes/contributions.js, line 33
+   Info: Unsanitized input from the HTTP request body flows into eval, where it is executed as JavaScript code. This may result in a Code Injection vulnerability.
+
+ ✗ [HIGH] Code Injection
+   Finding ID: 5172938e-a9e6-4aec-bb62-4dd8964bf446
+   Path: app/routes/contributions.js, line 32
+   Info: Unsanitized input from the HTTP request body flows into eval, where it is executed as JavaScript code. This may result in a Code Injection vulnerability.
+
+ ✗ [HIGH] Hardcoded Non-Cryptographic Secret
+   Finding ID: 1a4a9802-5bf8-48cf-916b-158af39c8409
+   Path: config/env/development.js, line 6
+   Info: Avoid hardcoding values that are meant to be secret. Found a hardcoded string used in here.
+
+ ✗ [HIGH] Regular Expression Denial of Service (ReDoS)
+   Finding ID: 133c389e-10f5-4e9b-bd5c-6e18bec040af
+   Path: app/routes/profile.js, line 61
+   Info: The method test is using a vulnerable regular expression /([0-9]+)+\#/ on the HTTP request body. This may result in a Regular expression Denial of Service attack (reDOS).
+
+ ✗ [HIGH] Server-Side Request Forgery (SSRF)
+   Finding ID: 9f33cb6e-ff7d-4729-a7b9-ed23b65ec36a
+   Path: app/routes/research.js, line 16
+   Info: Unsanitized input from an HTTP parameter flows into needle.get, where it is used as an URL to perform a request. This may result in a Server-Side Request Forgery vulnerability.
+
+
+
+╭─────────────────────────────────────────────────────────────────╮
+│ Test Summary                                                    │
+│                                                                 │
+│   Organization:      ramghumaliya10                             │
+│   Test type:         Static code analysis                       │
+│   Project path:      D:\Gabi\benchmark-compare-repo\NodeGoat    │
+│                                                                 │
+│   Total issues:   27                                            │
+│   Ignored issues: 0 [ 0 HIGH  0 MEDIUM  0 LOW ]                 │
+│   Open issues:    27 [ 6 HIGH  17 MEDIUM  4 LOW ]               │
+╰─────────────────────────────────────────────────────────────────╯
+    
+💡 Tip
+
+   To view ignored issues, use the --include-ignores option.
+                                                            
+
